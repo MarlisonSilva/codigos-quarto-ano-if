@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container {
+            display: grid;
+            height: 90vh;
+            grid-template-rows: 1fr 1fr;
+            background-color: #2196F3;
+        }
+
+        .grid-subcontainer {
+            display: grid;
+            height: 100%;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(255, 0, 43);
+        }
+
+        .grid-subsubcontainer {
+            display: grid;
+            height: 100%;
+            grid-template-columns: 1fr 1fr;
+            background-color: pink;
+        }
+
+        .grid-item {
+            background-color: #9c7334;
+            border: 1px solid #6b4f24;
+            border-radius: 7px;
+            height: 100%;
+            font-size: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">One</div>
+        <div class="grid-subcontainer">
+            <div class="grid-item" style="height: 100%;">Two</div>
+            <div class="grid-subsubcontainer">
+                <div class="grid-item">Three</div>
+                <div class="grid-item">Four</div>
+                <div class="grid-item">Five</div>
+            </div>
+        </div>
+    </div>
+</head>
+<body>
+    
+</body>
+</html>

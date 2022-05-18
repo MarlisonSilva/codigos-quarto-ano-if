@@ -47,6 +47,10 @@ div.calculadora {
 
 }
 
+.button-calc-clicado {
+    color: rgb(67, 201, 201);
+}
+
 .resultado {
     display: flex;
     padding: 10px;
@@ -73,3 +77,4 @@ div.calculadora {
     background-color: #66c9a8;
 
 }
+

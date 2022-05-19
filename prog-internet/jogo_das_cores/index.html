@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <title>Jogo das Cores</title>
+</head>
+<body>
+    <div class="cabecalho">
+        <h1>Cor gerada:</h1>
+        <div class="cor" id="cor-gerada"></div>
+        <p>Pontos: <span id="pontos"></span></p>
+    </div>
+    <div class="corpo">
+        <div class="cor" id="cor1" onclick="verificar(0)"></div>
+        <div class="cor" id="cor2" onclick="verificar(1)"></div>
+        <div class="cor" id="cor3" onclick="verificar(2)"></div>
+    </div>
+    <div class="funcoes">
+        <button onclick="novoJogo()">Jogar!</button>
+    </div>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

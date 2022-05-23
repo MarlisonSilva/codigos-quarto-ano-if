@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Macondo&display=swap');
+
 * {
     padding: 0;
     margin: 0;
 
+}
+
+body {
+    background-color: aliceblue;
 }
 
 .cabecalho {
@@ -13,12 +19,63 @@
     padding: 30px;
 }
 
-.cor {
-    display: flex;    
-    align-items: center;
-    justify-content: space-between;
-    height: 100px;
-    width: 300px;
+.cabecalho h1 {
+    font-family: 'Macondo', cursive;
+    font-size: 2.5rem;
 }
 
+.corpo {
+    display: flex;    
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px 0;
+    margin: auto;
+    width: 1000px;
+    
+}
 
+.cor {
+    height: 100px;
+    width: 300px;
+    background-color: grey;
+    border-radius: 10px;
+    margin: 0 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+
+}
+
+#cor-gerada {
+    margin: 15px 0;
+}
+
+.funcoes {
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+}
+
+#botao-jogar {
+    width: 150px;
+    height: 75px;
+    margin: 10px 0;
+    border: none;
+    background-color: gray;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Macondo', cursive;
+    font-size: 1.3rem;
+}
+
+#botao-jogar:hover {
+    background-color: rgb(179, 178, 178);
+    border: 1px black 100px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.7);
+}
+
+@media only screen and (max-width: 1000px) {
+    .corpo {
+        margin: 0 10px;
+        width: auto;
+
+    }
+}

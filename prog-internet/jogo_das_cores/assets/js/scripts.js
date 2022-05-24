@@ -32,14 +32,17 @@ function novoJogo() {
 }
 
 function verificar(corClicada) {
-    if (corClicada == opc) {
-        alert('PARABÉNS! VOCÊ ACERTOU A COR!')
-        pontos++;
-        document.querySelector('#pontos').innerHTML = pontos;
-        novoJogo();
-    } else {
-        alert('QUE PENA! VOCÊ ERROU A COR!')
-        novoJogo();
-        
+    if (opc != null){
+        if (corClicada == opc) {
+            alert('PARABÉNS! VOCÊ ACERTOU A COR!')
+            pontos++;
+            document.querySelector('#pontos').innerHTML = pontos;
+            novoJogo();
+        } else {
+            alert('QUE PENA! VOCÊ ERROU A COR! A cor correta era '+(opc+1)+'ª da esquerda para a direita')
+            novoJogo();
+            
+        }
     }
+    
 }

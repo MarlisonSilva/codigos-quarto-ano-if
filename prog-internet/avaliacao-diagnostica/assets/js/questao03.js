@@ -1,4 +1,3 @@
-// var cores = document.querySelector('cores');
 const cores = document.querySelectorAll('.cor');
 function carregarCores() {    
     for (let i = 0; i < cores.length; i++) {     
@@ -8,7 +7,6 @@ function carregarCores() {
         cores[i].style.backgroundColor = 'rgb('+red+', '+green+', '+blue+')';        
     }
 }
-
 function clicou(corClicada) {
     document.body.style.backgroundColor = cores[corClicada].style.backgroundColor;
 }

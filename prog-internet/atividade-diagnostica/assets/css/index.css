@@ -13,7 +13,12 @@ body {
 
 .header {
     background-color: #171a21;
-    
+    padding: 10px 0 20px 0;
+}
+
+.header-content {
+    max-width: 1050px;
+    margin: auto;
 }
 
 .options {
@@ -37,3 +42,47 @@ nav a{
     margin: 3px;
 }
 
+#logo_steam {
+    margin: 0 75px 0 0;
+}
+
+.mural {
+    
+}
+
+.nav_bar {
+    display: block;
+    margin: 40px auto;
+    max-width: 1050px;
+}
+
+.ad_event {
+    display: block;
+    margin: 75px auto;
+    max-width: 750px;
+    
+}
+
+.content {
+    background-color: #1b2838;
+    min-height: 400px;
+    padding: 50px 0;
+}
+
+.games-content {
+    margin: auto;
+    max-width: 1050px;
+}
+
+.games {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+    
+}
+
+.game {
+    width: 350px;
+
+}

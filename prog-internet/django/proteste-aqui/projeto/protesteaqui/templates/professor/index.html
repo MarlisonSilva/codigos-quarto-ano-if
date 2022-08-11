@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professores</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Idade</th>
+            <th>Disciplina</th>            
+        </tr>
+        {% for prof in professores %}
+            <tr>
+                <td>{{ prof.id }}</td>
+                <td>{{ prof.nome }}</td>
+                <td>{{ prof.idade }}</td>
+                <td>{{ prof.disciplina }}</td>
+            </tr>
+        {% endfor %}
+        
+    </table>
+</body>
+</html>

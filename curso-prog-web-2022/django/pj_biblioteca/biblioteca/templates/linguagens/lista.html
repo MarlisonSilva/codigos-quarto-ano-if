@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguagens</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Linguagens</h1>
+    <table>
+        <tr>
+            <th>Nome</th>
+            <!-- <th>Ações</th> -->
+        </tr>
+        {% for linguagem in linguagens %}
+            <tr>
+                <td>{{ linguagem.nome }}</td>
+                <!-- <td><a href="{% url 'detalheLinguagens' linguagem.id %}">Ver</a></td> -->
+                
+            </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <h1>Mais tabelas: </h1>
+        <div style="font-size: larger">
+            <a href="{% url 'listaAutores' %}">Lista de Autores</a><br/>
+            <a href="{% url 'listaEdicoes' %}">Lista de Edições</a><br/>
+            <a href="{% url 'listaLinguagens' %}">Lista de Linguagens</a><br/>
+            <a href="{% url 'listaArtigos' %}">Lista de Artigos</a><br/>
+        </div>
+        
+    </div>
+</body>
+</html>

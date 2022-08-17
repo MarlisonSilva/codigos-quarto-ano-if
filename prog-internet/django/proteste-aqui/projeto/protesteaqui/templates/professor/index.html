@@ -5,9 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professores</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+        
+    </style>
 </head>
 <body>
-    <table border="1">
+    <table>
         <tr>
             <th>ID</th>
             <th>Nome</th>
@@ -18,7 +24,7 @@
             <tr>
                 <td>{{ prof.id }}</td>
                 <td>{{ prof.nome }}</td>
-                <td>{{ prof.idade }}</td>
+                <td>{{ prof.idade }} ano(s)</td>
                 <td>{{ prof.disciplina }}</td>
             </tr>
         {% endfor %}

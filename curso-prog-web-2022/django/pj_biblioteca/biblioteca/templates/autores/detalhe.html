@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhe Autor</title>
+</head>
+<body>
+    <div>
+        <h1>Detalhes sobre {{ autor.nome }}</h1>
+        <p>E-mail: {{ autor.email }}</p>
+        <p>Biografia:</p>
+        <p>{{ autor.biografia }}</p>
+            
+        <a href="{% url 'listaAutores' %}">Lista de autores</a>
+    </div>
+    <div>
+        <h1>Mais tabelas: </h1>
+        <div style="font-size: larger">
+            <a href="{% url 'listaAutores' %}">Lista de Autores</a><br/>
+            <a href="{% url 'listaEdicoes' %}">Lista de Edições</a><br/>
+            <a href="{% url 'listaLinguagens' %}">Lista de Linguagens</a><br/>
+            <a href="{% url 'listaArtigos' %}">Lista de Artigos</a><br/>
+        </div>
+        
+    </div>
+</body>
+</html>

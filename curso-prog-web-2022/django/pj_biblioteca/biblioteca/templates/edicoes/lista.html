@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edições</title>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Lista de Edições</h1>
+    <table>
+        <tr>
+            <th>Número</th>
+            <th>Editorial</th>
+            <th>Data</th>
+            <!-- <th>Ações</th> -->
+        </tr>
+        {% for edicao in edicoes %}
+            <tr>
+                <td>{{ edicao.numero }}</td>
+                <td>{{ edicao.editorial }}</td>
+                <td>{{ edicao.data }}</td>
+                <!-- <td><a href="{% url 'detalheEdicoes' edicao.id %}">Ver</a></td> -->
+
+            </tr>
+        {% endfor %}
+    </table>
+    <div>
+        <h1>Mais tabelas: </h1>
+        <div style="font-size: larger">
+            <a href="{% url 'listaAutores' %}">Lista de Autores</a><br/>
+            <a href="{% url 'listaEdicoes' %}">Lista de Edições</a><br/>
+            <a href="{% url 'listaLinguagens' %}">Lista de Linguagens</a><br/>
+            <a href="{% url 'listaArtigos' %}">Lista de Artigos</a><br/>
+        </div>
+        
+    </div>
+</body>
+</html>

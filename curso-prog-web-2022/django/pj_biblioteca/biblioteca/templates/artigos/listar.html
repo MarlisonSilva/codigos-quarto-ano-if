@@ -13,29 +13,33 @@
 </head>
 <body>
     <h1>Lista de Artigos</h1>
+    <a href="{% url 'criarArtigos' %}">Novo Artigo</a>
     <table>
         <tr>
             <th>Título</th>
             <th>Autor</th>
             <th>Introdução</th>
-            <th>Ver</th>
+            <th>Ações</th>
         </tr>
         {% for artigo in artigos %}
             <tr>
                 <td>{{ artigo.titulo }}</td>
                 <td>{{ artigo.autor_id.nome }}</td>
                 <td>{{ artigo.introducao }}</td>
-                <td><a href="{% url 'detalheArtigos' artigo.id %}">Ver</a></td>
+                <td>
+                    <a href="{% url 'editarArtigos' artigo.id %}">Editar</a>
+                    <a href="{% url 'deletarArtigos' artigo.id %}">Apagar</a>
+                </td>
             </tr>
         {% endfor %}
     </table>
     <div>
         <h1>Mais tabelas: </h1>
         <div style="font-size: larger">
-            <a href="{% url 'listaAutores' %}">Lista de Autores</a><br/>
-            <a href="{% url 'listaEdicoes' %}">Lista de Edições</a><br/>
-            <a href="{% url 'listaLinguagens' %}">Lista de Linguagens</a><br/>
-            <a href="{% url 'listaArtigos' %}">Lista de Artigos</a><br/>
+            <a href="{% url 'listarAutores' %}">Lista de Autores</a><br/>
+            <a href="{% url 'listarEdicoes' %}">Lista de Edições</a><br/>
+            <a href="{% url 'listarLinguagens' %}">Lista de Linguagens</a><br/>
+            <a href="{% url 'listarArtigos' %}">Lista de Artigos</a><br/>
         </div>
         
     </div>

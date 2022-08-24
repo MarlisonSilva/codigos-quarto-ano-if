@@ -1,4 +1,3 @@
-import imp
 from django.db import models
 from django.core.validators import MaxValueValidator
 # Create your models here.
@@ -21,7 +20,7 @@ class Linguagem(models.Model):
         return self.nome
 
 class Edicao(models.Model):
-    numero = models.IntegerField(
+    numero = models.IntegerField(primary_key=True,
         validators=[MaxValueValidator(11)]
     )
     editorial = models.TextField()

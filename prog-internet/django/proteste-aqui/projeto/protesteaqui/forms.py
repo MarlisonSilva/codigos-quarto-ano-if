@@ -1,5 +1,3 @@
-from dataclasses import fields
-from re import M
 from django import forms
 from protesteaqui.models import Avaliacao
 

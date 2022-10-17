@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 06</title>
+</head>
+<body>    
+    <label for="input_number">Digite um número</label>
+    <input type="number" name="input_number" id="input_number">
+    <button onclick="lastNum()">Último número</button> <br>
+    <p id="result"></p>
+    <script>
+        function lastNum(){
+            var num = document.querySelector('#input_number');
+            var res = document.querySelector('#result');
+            if (num.value.length > 0)
+                res.innerHTML = 'o último dígito desse número é '+num.value.slice(num.value.length - 1, num.value.length)
+        }
+    </script>
+
+</body>
+</html>

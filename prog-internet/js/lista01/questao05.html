@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 05</title>
+</head>
+<body>
+    
+    <script>
+        var inicio = parseInt(window.prompt('digite um valor inteiro para iniciar'));
+        var fim = parseInt(window.prompt('digite um valor inteiro para finalizar'));
+        document.write('Primos: <br>');
+        for(var i = inicio; i <= fim; i++){
+            if (isPrimo(i)) {        
+                document.write(i+' é primo <br>');
+            }
+        }
+
+        function isPrimo(n1){
+            for(var i = 1; i <= n1; i++){                
+                if (n1%i == 0)
+                    if (i != 1 && n1 != i){
+                        console.log(n1 + ' não é primo, pois é divisível por ' + i);
+                        return false;
+                    }                                     
+            }
+            return true;            
+        }
+    </script>
+
+</body>
+</html>

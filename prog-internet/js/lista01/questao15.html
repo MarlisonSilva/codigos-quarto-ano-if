@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão 15</title>
+</head>
+<body>
+    <input type="number" name="mes" id="mes" placeholder="Digite um valor de 1 a 12">
+    <button onclick="verMes()">Ver mês</button>    
+    <div id="res"></div>
+    <script>
+        function verMes(){
+            const res = document.querySelector('#res')
+            var mes = document.querySelector('#mes').value
+            const MESES = {
+                '1': 'janeiro',
+                '2': 'fevereiro',
+                '3': 'março',
+                '4': 'abril',
+                '5': 'maio',
+                '6': 'junho',
+                '7': 'julho',
+                '8': 'agosto',
+                '9': 'setembro',
+                '10': 'outubro',
+                '11': 'novembro',
+                '12': 'dezembro'
+            } 
+            if ((mes > 0) && (mes <= 12))
+                res.innerHTML = 'O mês é ' + MESES[mes];
+            else
+                res.innerHTML = 'Eu disse um valor de 1 a 12!'
+        }
+    </script>
+</body>
+</html>

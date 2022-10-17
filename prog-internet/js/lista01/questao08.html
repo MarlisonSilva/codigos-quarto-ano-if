@@ -4,13 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questão 01</title>
+    <title>Questão 08</title>
 </head>
 <body>
     <label for="data">Insira sua data de nascimento:</label>
     <input type="date" name="data" id="data">
+    <button onclick="idade()">Idade</button>
+    <p id="resultado"></p>
     <script>
-        // Faça um programa em JavaScript que recebe 3 números e informa qual o menor e qual o maior entre eles.
+        function idade(){
+            var res = document.querySelector('#resultado')
+            var anoAtual = new Date().getFullYear()
+            var dataNasc = document.querySelector('#data');            
+            var anoNasc = dataNasc.value.slice(0, 4)
+            if((anoAtual - anoNasc) >= 0){
+                if((anoAtual - anoNasc) < 130)
+                    res.innerHTML = 'A idade é aproximadamente ' + (anoAtual - anoNasc) + ' anos';
+                else if((anoAtual - anoNasc) < anoAtual)                
+                    res.innerHTML = (anoAtual - anoNasc) + ' anos já é um pouco demais...';
+                else
+                    res.innerHTML = "Digite alguma data!"
+            } else {
+                res.innerHTML = "Data inválida!"
+
+            }
+        }
     </script>
 </body>
 </html>

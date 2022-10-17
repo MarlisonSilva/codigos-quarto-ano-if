@@ -7,9 +7,34 @@
     <title>Questão 01</title>
 </head>
 <body>
-    <input type="date" name="data" id="data">
+
     <script>
         // Faça um programa em JavaScript que recebe 3 números e informa qual o menor e qual o maior entre eles.
+        var resultado;
+        var n1 = parseFloat(window.prompt('digite um valor para n1'));
+        
+        var n2 = parseFloat(window.prompt('digite um valor para n2'));
+        
+        var n3 = parseFloat(window.prompt('digite um valor para n3'));
+        
+        if ((n1 >= n2) && (n1 >= n3))        
+            resultado = "n1 é o maior";
+        else if ((n2 >= n1) && (n2 >= n3))
+            resultado = "n2 é o maior";
+        else if ((n3 >= n1) && (n3 >= n2))
+            resultado = "n3 é o maior";
+
+        if ((n1 <= n2) && (n1 <= n3))
+            resultado += " e n1 é o menor";
+        else if ((n2 <= n1) && (n2 <= n3))
+            resultado += " e n2 é o menor";
+
+        else if ((n3 <= n1) && (n3 <= n2))
+            resultado += " e n3 é o menor";
+            
+            
+        alert(resultado);
     </script>
+
 </body>
 </html>
